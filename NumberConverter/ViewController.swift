@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var hexaTextField: UITextField!
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -42,17 +44,17 @@ class ViewController: UIViewController {
     
     
     @IBAction func binaryEdit(_ sender: Any) {
-        let binaryText: String = binaryTextField.text!
-        let binaryTextInt = Int(binaryText)
-        
-        let binaryToDecimal = String(binaryTextInt ?? 0, radix: 2, uppercase: true)
-        decimalTextField.text = String(binaryToDecimal)
-        
-//        if let number = Int(binaryText, radix: 2) {
-//            print(number) // Output: 25
-//        }
+//        let binaryText: String = binaryTextField.text!
+//        let binaryTextInt = Int(binaryText)
+//        
+//        let binaryToDecimal = String(binaryTextInt ?? 0, radix: 2, uppercase: true)
+//        decimalTextField.text = String(binaryToDecimal)
+//        
+////        if let number = Int(binaryText, radix: 2) {
+////            print(number) // Output: 25
+////        }
+////
 //
-        
         
     }
     
