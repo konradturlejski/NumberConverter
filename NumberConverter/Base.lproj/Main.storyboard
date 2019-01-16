@@ -69,27 +69,27 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
                                                 <connections>
-                                                    <action selector="decimalEdit:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="NRc-m8-f0G"/>
+                                                    <action selector="decimalEdit:" destination="BYZ-38-t0r" eventType="editingChanged" id="D99-ZQ-Sa5"/>
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8nO-RS-koq">
                                                 <rect key="frame" x="0.0" y="59.999999999999986" width="187" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 <connections>
-                                                    <action selector="binaryEdit:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Nlc-Y5-415"/>
+                                                    <action selector="binaryEdit:" destination="BYZ-38-t0r" eventType="editingChanged" id="pcc-U1-5B7"/>
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J4n-rN-VHd">
                                                 <rect key="frame" x="0.0" y="120" width="187" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
                                                 <connections>
-                                                    <action selector="octalEdit:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Y6m-N6-kIN"/>
+                                                    <action selector="octalEdit:" destination="BYZ-38-t0r" eventType="editingChanged" id="FTS-3X-iK5"/>
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qNX-DV-E2N">
@@ -98,13 +98,24 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
-                                                    <action selector="hexEdit:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="jeX-7u-E5X"/>
+                                                    <action selector="hexEdit:" destination="BYZ-38-t0r" eventType="editingChanged" id="S5x-0t-2bx"/>
                                                 </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoc-WF-bKC">
+                                <rect key="frame" x="20" y="351" width="67" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" red="0.98823535439999999" green="0.99215692280000001" blue="0.99607849120000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearTextFields:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VKU-ce-MFb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>

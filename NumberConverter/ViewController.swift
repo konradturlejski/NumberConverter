@@ -19,23 +19,36 @@ class ViewController: UIViewController {
     @IBOutlet weak var hexaTextField: UITextField!
     
     
+    @IBAction func clearTextFields(_ sender: UIButton) {
+        decimalTextField.text = ""
+        binaryTextField.text = ""
+        octalTextField.text = ""
+        hexaTextField.text = ""
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // Do any additional setup after loading the view.
     }
     
+    
+ 
+    
+    
+    
     @IBAction func decimalEdit(_ sender: Any) {
+        
+        
         let decimalText: String = decimalTextField.text!
         let decimalTextInt = Int(decimalText)
-        
+
         let decimalToBinary = String(decimalTextInt ?? 0, radix: 2, uppercase: true)
         binaryTextField.text = String (decimalToBinary)
-        
+
         let decimalToOctal = String (decimalTextInt ?? 0, radix: 8, uppercase: true)
         octalTextField.text = String(decimalToOctal)
-        
+
         let decimalToHex = String(decimalTextInt ?? 0, radix: 16, uppercase: true)
         hexaTextField.text = String (decimalToHex)
         
@@ -44,25 +57,36 @@ class ViewController: UIViewController {
     
     
     @IBAction func binaryEdit(_ sender: Any) {
-//        let binaryText: String = binaryTextField.text!
-//        let binaryTextInt = Int(binaryText)
-//        
-//        let binaryToDecimal = String(binaryTextInt ?? 0, radix: 2, uppercase: true)
-//        decimalTextField.text = String(binaryToDecimal)
-//        
-////        if let number = Int(binaryText, radix: 2) {
-////            print(number) // Output: 25
-////        }
-////
-//
+
+        let binaryToDecimal = String(binaryTextField.text!)
+        if let decimal = Int(String(binaryToDecimal), radix: 2) {
+            decimalTextField.text = String(decimal)
+        }
         
     }
     
     @IBAction func octalEdit(_ sender: Any) {
+        
+        let octalToDecimal = String(octalTextField.text!)
+        if let decimal = Int(String(octalToDecimal), radix: 8) {
+            decimalTextField.text = String(decimal)
+        }
+        
     }
     
     
     @IBAction func hexEdit(_ sender: Any) {
+        
+        let hexToDecimal = String(hexaTextField.text!)
+        if let decimal = Int(String(hexToDecimal), radix: 16) {
+            decimalTextField.text = String(decimal)
+        }
+        
+        let hexToBinary = String(binaryTextField.text!)
+        if let binary = Int(String(hexToBinary), radix: 2) {
+            binaryTextField.text = String(binary)
+        }
+        
     }
 }
 
